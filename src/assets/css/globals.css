@@ -1,0 +1,16 @@
+:root {
+    --black-100: #171718;
+    --black-200: #1e1f22;
+    --black-300: #313338;
+    --grey-100: #858383;
+    --grey-200: #363636;
+
+    --title-bar-height: 22px;
+}
+
+body {
+    background-color: var(--black-200);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
