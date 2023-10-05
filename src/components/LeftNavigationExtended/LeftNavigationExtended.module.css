@@ -1,0 +1,39 @@
+.leftNavigationExtended {
+    width: 240px;
+    height: 100%;
+    background: var(--grey-300);
+}
+
+.leftNavigationExtended .header {
+    width: 100%;
+    color: var(--white-200);
+    border-bottom: 0.015em solid var(--grey-200);
+}
+
+.leftNavigationExtended .header div {
+    padding: 4px;
+}
+
+.leftNavigationExtended .header .searchBar {
+    width: 100%;
+    display: flex;
+
+}
+
+.leftNavigationExtended .header .searchBar input {
+    width: 100%;
+    padding: 8px;
+    background: var(--black-200);
+    border: none;
+    border-radius: var(--border-radius-1);
+    font-size: 0.82em;
+    letter-spacing: 0.01em;
+}
+
+.leftNavigationExtended .header .searchBar input::placeholder {
+    color: var(--grey-000);
+}
+
+.leftNavigationExtended .header .searchBar input:focus {
+    outline: none;
+}

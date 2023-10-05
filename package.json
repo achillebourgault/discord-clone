@@ -11,10 +11,10 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "main": "electron.js",
+  "main": "src/electron.js",
   "scripts": {
     "start": "react-scripts start",
-    "electron-start": "electron electron.js",
+    "electron-start": "electron src/electron.js",
     "build": "react-scripts build",
     "electron-build": "electron-builder",
     "test": "react-scripts test",
@@ -51,7 +51,7 @@
     "files": [
       "build/**/*",
       "node_modules/**/*",
-      "electron.js"
+      "src/electron.js"
     ],
     "linux": {
       "target": [

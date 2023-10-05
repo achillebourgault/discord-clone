@@ -14,8 +14,13 @@ function createWindow() {
         webPreferences: { nodeIntegration: true }
     });
 
-    mainWindow.loadURL('http://localhost:3000');
-
+    // Check if we are in development mode, if so load the local server
+    if (process.env.NODE_ENV === 'development') {
+        mainWindow.loadURL('http://localhost:3000');
+    } else {
+        // If we are not in development mode, load the production build index.html
+        mainWindow.loadFile('../build/index.html');
+    }
 }
 
 app.whenReady().then(createWindow);

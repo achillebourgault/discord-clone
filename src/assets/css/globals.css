@@ -2,10 +2,16 @@
     --black-100: #171718;
     --black-200: #1e1f22;
     --black-300: #313338;
+    --grey-000: #9299a2;
     --grey-100: #858383;
     --grey-200: #363636;
+    --grey-300: #2B2D31FF;
+
+    --white-200: #cecece;
 
     --title-bar-height: 22px;
+
+    --border-radius-1: 4px;
 }
 
 body {
