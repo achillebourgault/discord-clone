@@ -7,6 +7,28 @@
     padding: 8px;
     width: 65px;
     user-select: none;
+    align-items: center;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+.leftNavigation::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.leftNavigation::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.leftNavigation::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .listItemIcon {
@@ -18,7 +40,12 @@
     position: relative;
     border-radius: 25px;
     transition: all 0.3s;
+    align-items: stretch;
     cursor: pointer;
+}
+
+.privateMessages .listItemIcon {
+    align-items: center;
 }
 
 .listItemIcon .listItemIconName {
@@ -36,18 +63,29 @@
 }
 
 .listItemIcon:hover .listItemIconName {
-    display: block;
+    display: flex;
     opacity: 1;
     transition: opacity 0.3s;
+    position: fixed;
+    left: 68px;
 }
 
-.listItemIcon:hover {
+.listItemIcon:hover, .listItemIcon:hover > img {
     border-radius: 16px;
     transition: all 0.3s;
 }
 
 .listItemIcon > img {
-    height: 21px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    height: 48px;
+    width: 48px;
+}
+
+.privateMessages img {
+    height: 26px !important;
+    width: 26px !important;
+    object-fit: contain;
 }
 
 .listItemSep {
@@ -58,4 +96,55 @@
 
 .privateMessagesActive {
     background: #5764f0;
+}
+
+.listItemGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+    place-self: center;
+    background: var(--grey-300);
+    border-radius: 50px;
+}
+
+.listItemGroup .listItem:last-child img {
+    margin-top: 2px;
+}
+
+.listItemGroupTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+}
+
+.listItemGroupTitle svg {
+    height: 24px;
+    width: 24px;
+    fill: var(--grey-000);
+    transition: all 0.3s;
+}
+
+.listItemGroupTitle .listItemGroupTitleName {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: fixed;
+    z-index: 1000;
+}
+
+.listItemGroupTitle:hover .listItemGroupTitleName {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.serversList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: -6px;
 }

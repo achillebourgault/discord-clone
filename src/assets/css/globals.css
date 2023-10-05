@@ -6,7 +6,9 @@
     --grey-100: #858383;
     --grey-200: #363636;
     --grey-300: #2B2D31FF;
+    --grey-400: #35373c;
 
+    --white-100: #eeeeee;
     --white-200: #cecece;
 
     --title-bar-height: 22px;
@@ -19,4 +21,5 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

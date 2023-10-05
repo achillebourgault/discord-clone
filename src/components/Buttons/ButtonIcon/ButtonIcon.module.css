@@ -1,0 +1,19 @@
+.buttonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 34px;
+    color: var(--grey-000);
+    background: transparent;
+    border-radius: var(--border-radius-1);
+    transition: all 0.3s;
+}
+
+.buttonIcon:active, .buttonIcon:hover {
+    background: var(--grey-300);
+    transition: all 0.3s;
+}

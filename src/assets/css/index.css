@@ -8,7 +8,7 @@
 
 .parent main {
     display: inline-flex;
-    height: calc(100% - var(--title-bar-height));
+    height: calc(100vh - var(--title-bar-height));
 }
 
 

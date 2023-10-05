@@ -2,6 +2,9 @@
     width: 240px;
     height: 100%;
     background: var(--grey-300);
+    user-select: none;
+    border-radius: var(--border-radius-1);
+    position: relative;
 }
 
 .leftNavigationExtended .header {
@@ -12,6 +15,7 @@
 
 .leftNavigationExtended .header div {
     padding: 4px;
+    display: flex;
 }
 
 .leftNavigationExtended .header .searchBar {
@@ -36,4 +40,115 @@
 
 .leftNavigationExtended .header .searchBar input:focus {
     outline: none;
+}
+
+.leftNavigationExtended .content {
+    padding: 4px;
+    padding-top: 8px;
+}
+
+.leftNavigationExtended .content > div {
+    padding: 4px;
+    display: grid;
+    gap: 4px;
+}
+
+
+.profileCardSection {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0.45em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black-200);
+}
+
+.profileCardSection .wrapper {
+    width: 96%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileCardSection .wrapper .actions {
+    display: inline-flex;
+    gap: 2px;
+}
+
+.profileCardSection .wrapper .details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profileCardSection .wrapper .details h3 {
+    line-height: 0;
+    margin: 0;
+    font-size: 0.82em;
+    letter-spacing: -0.04em;
+    color: var(--white-100);
+    font-weight: 500;
+}
+
+.profileCardSection .wrapper .details .status {
+    color: var(--grey-000);
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.left {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    padding: 6px;
+    padding-bottom: 2px;
+    border-radius: var(--border-radius-1);
+    width: 124px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.left:hover {
+    background: var(--grey-300);
+    transition: all 0.3s;
+}
+
+.avatarSection {
+    position: relative;
+    width: auto;
+}
+
+.statusIndicatorSection {
+    border-radius: 50%;
+}
+
+.statusIndicatorSection > div {
+    padding: 0.225em;
+    background: var(--black-100);
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0px;
+    right: -6px;
+}
+
+.statusIndicator {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--grey-000);
+}
+
+.profileCardSection .wrapper .avatarSection .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.online {
+    background: #23a459;
 }
