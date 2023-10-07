@@ -1,3 +1,5 @@
+/* LeftNavigation.module.css */
+
 .leftNavigation {
     background: transparent;
     height: 100%;
@@ -5,11 +7,13 @@
     flex-direction: column;
     gap: 12px;
     padding: 8px;
-    width: 65px;
+    width: var(--left-navigation-width);
     user-select: none;
     align-items: center;
     z-index: 999;
-    overflow-y: scroll;
+    max-height: calc(100% - 16px);
+    overflow-y: auto;
+    position: relative;
 }
 
 .leftNavigation::-webkit-scrollbar {
@@ -50,8 +54,9 @@
 
 .listItemIcon .listItemIconName {
     position: absolute;
-    left: 60px;
-    width: max-content;
+    top: 50%;
+    left: 40px; /* Ajustez la position horizontale selon vos besoins */
+    transform: translateY(-50%);
     background: var(--black-100);
     color: #cecece;
     padding: 8px;
@@ -60,17 +65,19 @@
     opacity: 0;
     transition: opacity 0.3s;
     display: none;
+    z-index: 9999;
 }
 
 .listItemIcon:hover .listItemIconName {
-    display: flex;
+    display: block;
     opacity: 1;
     transition: opacity 0.3s;
-    position: fixed;
-    left: 68px;
+    position: absolute;
 }
 
-.listItemIcon:hover, .listItemIcon:hover > img {
+
+.listItemIcon:hover,
+.listItemIcon:hover > img {
     border-radius: 16px;
     transition: all 0.3s;
 }

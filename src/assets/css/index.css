@@ -1,14 +1,11 @@
 .parent {
-    display: flex;
-    flex-direction: column;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .parent main {
-    display: inline-flex;
-    height: calc(100vh - var(--title-bar-height));
+    display: flex;
+    /*height: calc(100vh - var(--title-bar-height));*/
 }
 
 
@@ -24,8 +21,29 @@
 }
 
 .content {
-    border-top-left-radius: 8px;
+    /*border-top-left-radius: 8px;*/
+    /*width: calc(100vw -var(--left-navigation-width));*/
+    /*height: calc(100vh - var(--title-bar-height));*/
+    /*background: var(--black-300);*/
     width: 100%;
-    height: calc(100vh - var(--title-bar-height));
-    background: var(--black-300);
+    height: 100vh;
+    color: white;
+}
+
+
+.leftNavWrapper {
+    width: var(--left-navigation-width);
+}
+
+.leftNavWrapper::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.leftNavWrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.leftNavWrapper::-webkit-scrollbar-track {
+    background: transparent;
 }

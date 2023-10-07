@@ -22,9 +22,11 @@ function App() {
         <TitleBar />
 
         <main>
-          <LeftNavigation />
+            <div className="leftNavWrapper">
+                <LeftNavigation />
+            </div>
           <div className="content">
-            <LeftNavigationExtended user={user} />
+              <LeftNavigationExtended user={user} />
           </div>
         </main>
       </div>
